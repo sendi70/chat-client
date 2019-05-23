@@ -163,7 +163,7 @@ namespace Client
                 writing = new StreamWriter(client.GetStream());
                 
                 //writing.Write("password");
-                writing.WriteLine(tbNick.Text);
+                writing.WriteLine(tbNick.Text+"|"+tbRoom.Text);
                 writing.Flush();
                 activeCall = true;
                 backgroundWorker2.RunWorkerAsync();
@@ -188,17 +188,27 @@ namespace Client
                     string messageRecived;//receive a message
                     while((messageRecived = reading.ReadLine()) != "END") {
                         string[] splited =messageRecived.Split(new Char[] { '|' });
+                        Console.WriteLine(splited[1]);
                         if (splited[2].Split(null)[0] == "//p")
                         {
                             string[] usuwane = splited[2].Split(null).Skip(2).ToArray();
                             string message = string.Join(" ", usuwane);
                             splited[2] = message;
                         }
+                        if(splited[0]=="disconnect")
+                        {
+                            MessageBox.Show("Ktoś cię nie lubi :/ Zostałeś wyrzucony.");
+                            bConnect_Click(null,null);
+                        }
                         if (splited[1] == nick)
                             wbText.Invoke(new MethodInvoker(delegate { wbText.DocumentText += "<div class='me'><p class='time'>" + splited[0] + "</p><p class='nick'>" + splited[1] + "</p><p class='message'>" + splited[2] + "</p></div>"; }));
                         else {
                             soundPlayer.Play();
                             wbText.Invoke(new MethodInvoker(delegate { wbText.DocumentText+="<div class='you'><p class='time'>"+splited[0]+ "</p><p class='nick'>" + splited[1] + "</p><p class='message'>" + splited[2] + "</p></div>"; }));
+                        }
+                        if(splited[0]=="room")
+                        {
+                            tbRoom.Invoke(new MethodInvoker(delegate { tbRoom.Text = splited[1]; }));
                         }
                         //wbText.Document.Window.ScrollTo(0, wbText.Document.Window.Size.Height);
                     }

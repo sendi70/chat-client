@@ -57,6 +57,8 @@
             this.imgSmileTears = new System.Windows.Forms.PictureBox();
             this.imgSmile = new System.Windows.Forms.PictureBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbRoom = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTears)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgKiss)).BeginInit();
@@ -89,7 +91,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(178, 80);
+            this.materialLabel1.Location = new System.Drawing.Point(122, 80);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(40, 19);
@@ -101,14 +103,14 @@
             this.tbNick.Depth = 0;
             this.tbNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.tbNick.Hint = "";
-            this.tbNick.Location = new System.Drawing.Point(224, 80);
+            this.tbNick.Location = new System.Drawing.Point(168, 80);
             this.tbNick.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbNick.Name = "tbNick";
             this.tbNick.PasswordChar = '\0';
             this.tbNick.SelectedText = "";
             this.tbNick.SelectionLength = 0;
             this.tbNick.SelectionStart = 0;
-            this.tbNick.Size = new System.Drawing.Size(120, 23);
+            this.tbNick.Size = new System.Drawing.Size(84, 23);
             this.tbNick.TabIndex = 21;
             this.tbNick.UseSystemPasswordChar = false;
             // 
@@ -117,7 +119,7 @@
             this.tbIP.Depth = 0;
             this.tbIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.tbIP.Hint = "";
-            this.tbIP.Location = new System.Drawing.Point(441, 80);
+            this.tbIP.Location = new System.Drawing.Point(545, 80);
             this.tbIP.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbIP.Name = "tbIP";
             this.tbIP.PasswordChar = '\0';
@@ -134,7 +136,7 @@
             this.nUDPort.Depth = 0;
             this.nUDPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.nUDPort.Hint = "";
-            this.nUDPort.Location = new System.Drawing.Point(612, 80);
+            this.nUDPort.Location = new System.Drawing.Point(695, 80);
             this.nUDPort.MouseState = MaterialSkin.MouseState.HOVER;
             this.nUDPort.Name = "nUDPort";
             this.nUDPort.PasswordChar = '\0';
@@ -152,7 +154,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(371, 80);
+            this.materialLabel2.Location = new System.Drawing.Point(475, 80);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(64, 19);
@@ -165,7 +167,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(569, 80);
+            this.materialLabel3.Location = new System.Drawing.Point(652, 80);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(37, 19);
@@ -176,7 +178,7 @@
             // 
             this.bConnect.Depth = 0;
             this.bConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.bConnect.Location = new System.Drawing.Point(25, 70);
+            this.bConnect.Location = new System.Drawing.Point(12, 70);
             this.bConnect.MouseState = MaterialSkin.MouseState.HOVER;
             this.bConnect.Name = "bConnect";
             this.bConnect.Primary = true;
@@ -408,11 +410,41 @@
             this.materialLabel4.TabIndex = 48;
             this.materialLabel4.Text = "say //users to get user list";
             // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(259, 80);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(93, 19);
+            this.materialLabel6.TabIndex = 49;
+            this.materialLabel6.Text = "Room Name";
+            // 
+            // tbRoom
+            // 
+            this.tbRoom.Depth = 0;
+            this.tbRoom.Hint = "";
+            this.tbRoom.Location = new System.Drawing.Point(358, 80);
+            this.tbRoom.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbRoom.Name = "tbRoom";
+            this.tbRoom.PasswordChar = '\0';
+            this.tbRoom.SelectedText = "";
+            this.tbRoom.SelectionLength = 0;
+            this.tbRoom.SelectionStart = 0;
+            this.tbRoom.Size = new System.Drawing.Size(111, 23);
+            this.tbRoom.TabIndex = 50;
+            this.tbRoom.UseSystemPasswordChar = false;
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 624);
+            this.Controls.Add(this.tbRoom);
+            this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.imgSmile);
             this.Controls.Add(this.imgSmileTears);
@@ -479,6 +511,8 @@
         private System.Windows.Forms.PictureBox imgSmile;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbRoom;
     }
 }
 
